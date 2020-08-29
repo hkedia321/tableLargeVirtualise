@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Head from './Head';
-import Loader from '../../loader/Loader'
 
 const CardStyled = styled.div`
     background-color: #fff;
@@ -12,17 +11,24 @@ const CardStyled = styled.div`
     width: 80%;
 `;
 
+const CardBody = styled.div`
+    padding: 20px 0px;
+`;
+
 function Card(props) {
     return (
         <CardStyled>
-            <Head fetchTableData={props.fetchTableData} />
-            {props.children}
+            <Head fetchTableData={props.fetchTableData} title={props.title} />
+            <CardBody>
+                {props.children}
+            </CardBody>
         </CardStyled>
     )
 }
 
 Card.propTypes = {
-    fetchTableData: PropTypes.func
+    fetchTableData: PropTypes.func,
+    title: PropTypes.string
 }
 
 

@@ -1,4 +1,4 @@
-import { call, put, takeLatest, fork, takeEvery } from 'redux-saga/effects';
+import { call, put, takeLatest } from 'redux-saga/effects';
 import { fetchJsonWrapper } from './asyncWrappers/fetchJsonWrapper';
 import { REQUEST_TABLE_DATA, SUCCESS_TABLE_DATA, ERROR_TABLE_DATA } from '../actions/actionTypes';
 
@@ -25,5 +25,5 @@ export function* fetchData(action) {
 }
 
 export function* listenForGetTableData() {
-    yield takeEvery( REQUEST_TABLE_DATA, fetchData );
+    yield takeLatest( REQUEST_TABLE_DATA, fetchData );
   }

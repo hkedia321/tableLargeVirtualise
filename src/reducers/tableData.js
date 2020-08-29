@@ -7,7 +7,6 @@ const initialState = {
 };
 
 export default function(state = initialState, action) {
-    console.log("INSIDE TABLEDATA_REDUCER")
   switch (action.type) {
     case REQUEST_TABLE_DATA: {
       return {

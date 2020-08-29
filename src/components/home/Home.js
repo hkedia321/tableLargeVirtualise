@@ -1,32 +1,36 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import Header from '../header/Header';
-import Graph from '../graph/Graph';
+import Header from '../navHeader/Header';
 import Card from './card/Card';
 import DataTable from '../datatable/DataTable'
 import * as requestTableDataFunctions from '../../actions/actionCreators';
-import { REQUEST_TABLE_DATA } from '../../actions/actionTypes'
 import Loader from '../loader/Loader';
 
-class Home extends React.Component {
-    fetchTableData = () => {
-        this.props.requestTableDataAction.requestTableData();
-    }
-    render() {
+const fetchTableData = (props) => {
+    props.requestTableDataAction.requestTableData();
+}
+
+const CARD_TITLE = "Your Campaigns Data Trend"
+
+const Home = (props) => {
+
+    useEffect(() => {
+        fetchTableData(props);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+      },[])
+
     return (
         <>
         <Header />
-        <Card fetchTableData={this.fetchTableData}>
-            <h3>hetl</h3>
-        <h3>{(this.props.tableData.fetched.toString())}</h3>
-        { this.props.tableData.fetched ? <DataTable data={this.props.tableData.data} /> : <Loader /> }
+        <Card fetchTableData={fetchTableData.bind(null, props)} title={CARD_TITLE}>
+        { props.tableData.fetched ? <DataTable data={props.tableData.data} /> : <Loader /> }
         </Card>
         
         </>
     )
-    }
 }
+
 const mapStateToProps = state => ({
     tableData: state.tableData
 })
@@ -37,5 +41,3 @@ const mapDispatchToProps = dispatch => {
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
-
-// export default Home;

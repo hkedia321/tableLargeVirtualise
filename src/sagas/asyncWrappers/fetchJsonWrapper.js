@@ -1,4 +1,4 @@
-import fetch from 'isomorphic-fetch'; // Also provides a polyfill for fetch in IE11
+import fetch from 'isomorphic-fetch';
 
 export const fetchJsonWrapper = ( url, method = 'GET' ) => {
 
@@ -7,7 +7,7 @@ export const fetchJsonWrapper = ( url, method = 'GET' ) => {
       if ( !response.ok ) {
         throw response; // Send "bad" response to catch()
       } else {
-        return response.json(); // Send "good" response to following then()
+        return response.json(); 
       }
     })
     .then( response => {
