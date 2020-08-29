@@ -3,7 +3,8 @@ import { REQUEST_TABLE_DATA, SUCCESS_TABLE_DATA, ERROR_TABLE_DATA } from "../act
 const initialState = {
   data: null,
   fetched: false,
-  error: null
+  error: null,
+  errorMsg: null
 };
 
 export default function(state = initialState, action) {
@@ -14,6 +15,7 @@ export default function(state = initialState, action) {
         data: null,
         fetched: false,
         error: null,
+        errorMsg: null
       };
     }
     case SUCCESS_TABLE_DATA: {
@@ -22,6 +24,7 @@ export default function(state = initialState, action) {
             data: Object.assign({},action.payload.data),
             fetched: true,
             error: null,
+            errorMsg: null
         }
     }
     case ERROR_TABLE_DATA: {
@@ -30,6 +33,7 @@ export default function(state = initialState, action) {
           data: null,
           fetched: true,
           error: action.payload.error,
+          errorMsg: 'Couldn\'t Fetch Data'
         }
     }
     default:

@@ -1,0 +1,8 @@
+1. display carets for hiding/ showing
+2. show total in top
+3. implement infinite scrolling
+4. rotate loading button while loading
+5. allow only 1 request in progress
+6. Decrease padding in cells
+7. write tests
+8. make documentation
