@@ -9,7 +9,7 @@ import * as requestTableDataFunctions from 'actions/actionCreators';
 import Loader from 'components/loader';
 import ErrorDisplay from 'components/error';
 
-const CARD_TITLE = "Your Facebook Campaigns Data"
+const CARD_TITLE = "Your Facebook Campaigns' Data"
 
 const fetchTableData = (props) => {
     props.requestTableDataAction.requestTableData();

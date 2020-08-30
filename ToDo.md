@@ -1,4 +1,3 @@
-- implement infinite scrolling (main)
+- implement infinite scrolling (main) & table scroll
 - smooth width transition
 - write tests
-- make documentation
