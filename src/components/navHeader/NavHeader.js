@@ -20,7 +20,7 @@ const FontAwesomeIconStyled = styled(FontAwesomeIcon)`
 `;
     
 
-function Header() {
+function NavHeader() {
     
     return (
         <HeaderDiv>
@@ -29,4 +29,4 @@ function Header() {
         </HeaderDiv>
     )
 }
-export default Header;
+export default NavHeader;

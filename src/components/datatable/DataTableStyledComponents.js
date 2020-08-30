@@ -1,30 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-  table {
-  width: 100%;
-  table-layout: fixed;
-  height: 90vh;
-  overflow-y: scroll;
-  border-collapse: collapse;
-  th, td {
+  td, th {
     border: 1px solid #d0d0d0;
     border-collapse: collapse;
-    width: 200px;
-  }
-  th, td, tr {
-    padding: 10px;
-  }
-  th {
-    text-align: left;
-  }
-  thead tr {
-      background: #f2f2f2;
-      padding: 15px;
-  }
-  tbody td {
-      position: relative;
-  }
+    transition: max-width 1s ease;
   }
 `;
 

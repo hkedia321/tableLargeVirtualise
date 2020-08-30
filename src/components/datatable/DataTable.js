@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import * as StyledComponents from './DataTableStyledComponents';
-import Graph from 'components/graph/Graph';
+import ColumnHeading from './ColumnHeading';
+import RecordRow from './RecordRow';
 
 const dataTableGraphRecords = [
     {
@@ -14,37 +16,80 @@ const dataTableGraphRecords = [
     }
 ]
 
-function DataTable(props) {
+const TableStyled = styled.table`
+    width: 100%;
+    table-layout: fixed;
+    height: 90vh;
+    overflow-y: scroll;
+    border-collapse: collapse;
+`;
+
+const HeaderRowStyled = styled.tr`
+    background: #f2f2f2;
+    padding: 15px;
+`;
+
+
+
+const DataTable = function(props) {
+
+    const [campaignColumnOpen, setCampaignColumnOpen] = useState(true);
+    const [graphColumnsOpenArray, setGraphColumnsOpenArray] = useState(new Array(dataTableGraphRecords.length).fill(true));
+
+    const handleToggleGraphColumnShow = (index) => {
+        setGraphColumnsOpenArray(prev => 
+            prev.slice(0, index)
+            .concat(!prev[index])
+            .concat(prev.slice(index+1)))
+    }
+
     return (
         <>
-    <table>
-        <thead>
-            <tr>
-                <th>Campaign Id</th>
-                {dataTableGraphRecords.map((item, index) => <th key={index}>{item.heading}</th>)}
-            </tr>
-        </thead>
-        <tbody>
-            {props.data.data.slice(0,10).map((item, index) => {
-                return (
-                    <tr key={index}>
-                        <td>{item.groups.Campaign.metadata.name}</td>
-                        {dataTableGraphRecords.map((columnObject, index) => {
-                            const graphData = item.trend.map(dayData => dayData[columnObject.key])
-                            const total = item.trend.reduce((total, dayData) => total + dayData[columnObject.key], 0)
-                            return <td key={index}><Graph data={graphData} total={total} /></td>
-                        })}
-                        
-                    </tr>
-                )
-            })}
-        </tbody>
-    </table>
+    {props.show && 
+        <TableStyled>
+            <thead>
+                <HeaderRowStyled>
+                    <ColumnHeading 
+                        handleToggleColumnShow={()=>setCampaignColumnOpen(prev => !prev)} 
+                        text="Campaign Id" 
+                        isGraphHeader={false} 
+                        isOpen={campaignColumnOpen} 
+                    />
+                    {dataTableGraphRecords.map((item, index) => 
+                        <ColumnHeading 
+                            key={index} 
+                            isGraphHeader={true}    
+                            text={item.heading} 
+                            columnKey={item.key} 
+                            data={props.data} 
+                            handleToggleColumnShow={() => handleToggleGraphColumnShow(index)}
+                            isOpen={graphColumnsOpenArray[index]} 
+                            />
+                     )}
+                </HeaderRowStyled>
+            </thead>
+            <tbody>
+                {props.data.map((item, index) => {
+                    return (
+                        <RecordRow
+                         key={index} 
+                         isCampaignColumnOpen={campaignColumnOpen} 
+                         isGraphColumnsOpenArray={graphColumnsOpenArray}
+                         rowData={item} 
+                         dataTableGraphRecords={dataTableGraphRecords} 
+                         />
+                    )
+                })}
+            </tbody>
+        </TableStyled>
+    }
     <StyledComponents.GlobalStyle/>
     </>
     );
 }
+
 DataTable.propTypes = {
-    data: PropTypes.object
+    data: PropTypes.array,
+    show: PropTypes.bool
 }
 export default DataTable;

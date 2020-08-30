@@ -1,14 +1,19 @@
 import React from 'react';
-import ClipLoader from "react-spinners/ClipLoader";
+import styled from 'styled-components';
+import PuffLoader from "react-spinners/PuffLoader";
+
+const LoaderStyled = styled((props)=> <div {...props}/>)`
+  margin: 100px 0;
+`
 
 function Loader() {
     return (
-        <div align="center">
-        <ClipLoader
+        <LoaderStyled align="center">
+        <PuffLoader
           size={100}
           color={"#123abc"}
         />
-        </div>
+        </LoaderStyled>
     )
 }
 

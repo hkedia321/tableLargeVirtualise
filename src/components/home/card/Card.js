@@ -7,28 +7,31 @@ const CardStyled = styled.div`
     background-color: #fff;
     padding: 0 15px 25px;
     box-shadow: #eee 2px 2px;
-    margin: 50px auto;
+    margin: 30px auto;
     width: 80%;
+    // height: calc(100vh - 140px);
 `;
 
 const CardBody = styled.div`
     padding: 20px 0px;
 `;
 
-function Card(props) {
+const Card = React.memo(function(props) {
     return (
         <CardStyled>
-            <Head fetchTableData={props.fetchTableData} title={props.title} />
+            <Head fetchTableData={props.fetchTableData} title={props.title} isLoading={props.isLoading} subtitle={props.subtitle} />
             <CardBody>
                 {props.children}
             </CardBody>
         </CardStyled>
     )
-}
+})
 
 Card.propTypes = {
     fetchTableData: PropTypes.func,
-    title: PropTypes.string
+    title: PropTypes.string,
+    subtitle: PropTypes.string,
+    isLoading: PropTypes.bool
 }
 
 

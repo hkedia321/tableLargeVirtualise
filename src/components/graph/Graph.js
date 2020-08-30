@@ -1,23 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Highcharts from 'highcharts'
-import HighchartsReact from 'highcharts-react-official'
-import styled, { createGlobalStyle } from 'styled-components';
-import * as utils from 'utils';
+import Highcharts from 'highcharts';
+import HighchartsReact from 'highcharts-react-official';
+import './graph.css';
 
-const TotalHeading = styled.h4`
-    position: absolute;
-    z-index: 1;
-    padding-right: 10px;
-    font-weight: normal;
-    right: 15px;
-    top: -3px;
-    text-align: right;
-`;
 const graphStaticOptions = {
     chart: {
         type: 'area',
-        height: (7 / 16 * 100) + '%'
+        height: (7 / 16 * 100) + '%',
+        margin: 0
     },
     credits: {enabled: false},
     title: false,
@@ -51,13 +42,17 @@ const graphStaticOptions = {
     tooltip: {
         formatter: function() {
           return (
-            '' 
+              `
+              <span class="graphTooltipValue">Value: ${this.y}</span>
+              <br/>
+              <span class="graphTooltipDate">Date: ${this.key} </span> 
+               `
           )
         },
       },
   }
 
-function Graph(props) {
+const Graph = React.memo(function(props) {
     const options = {
         ...graphStaticOptions,
         series: [{
@@ -67,18 +62,16 @@ function Graph(props) {
     
       return (
           <>
-            <TotalHeading>&euro; {utils.formatNumberForDisplay(props.total)}</TotalHeading>
             <HighchartsReact
             highcharts={Highcharts}
             options={options}
             />
         </>
       )
-}
+})
 
 Graph.propTypes = {
-    data: PropTypes.array,
-    total: PropTypes.number
+    data: PropTypes.array.isRequired
 }
 
 export default Graph;

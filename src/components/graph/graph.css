@@ -1,0 +1,7 @@
+.graphTooltipDate {
+font-size: 0.7rem;
+}
+.graphTooltipValue {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
