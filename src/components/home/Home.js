@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import NavHeader from 'components/navHeader/NavHeader';
-import Card from './card/Card';
-import DataTable from 'components/datatable/DataTable';
+import NavHeader from 'components/navHeader';
+import Card from './card';
+import DataTable from 'components/datatable';
 import * as utils from 'utils';
 import * as requestTableDataFunctions from 'actions/actionCreators';
-import Loader from 'components/loader/Loader';
-import ErrorDisplay from 'components/error/ErrorDisplay';
+import Loader from 'components/loader';
+import ErrorDisplay from 'components/error';
 
 const CARD_TITLE = "Your Facebook Campaigns Data"
 
