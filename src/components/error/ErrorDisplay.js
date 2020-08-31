@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const ErrorDisplay = React.memo(function(props){
     return (
-        <h4 align="center" style={{color: '#F44336'}}>
+        <h4 data-testid="errorDisplay" align="center" style={{color: '#F44336'}}>
             Error: {props.message}
         </h4>
     )

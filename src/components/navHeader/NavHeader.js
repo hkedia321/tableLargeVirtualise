@@ -23,7 +23,7 @@ const FontAwesomeIconStyled = styled(FontAwesomeIcon)`
 function NavHeader() {
     
     return (
-        <HeaderDiv>
+        <HeaderDiv data-testid="navHeader">
             <ImgLogo src={ClarisightsLogo} />
             <FontAwesomeIconStyled icon={faBars} />
         </HeaderDiv>

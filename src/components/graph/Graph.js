@@ -61,12 +61,11 @@ const Graph = React.memo(function(props) {
     }
     
       return (
-          <>
-            <HighchartsReact
+        <HighchartsReact
+            data-testid="highChartGraph"
             highcharts={Highcharts}
             options={options}
-            />
-        </>
+        />
       )
 })
 

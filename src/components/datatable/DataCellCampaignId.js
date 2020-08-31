@@ -23,7 +23,7 @@ const TextIdStyled = styled.span`
 
 const DataCellCampaignId = React.memo(function(props) {
     const { text, isOpen } = props;
-    return <DataCellStyled>
+    return <DataCellStyled data-testid="dataCellCampaignId">
         {isOpen && <>
         <FontAwesomeIconStyled size={'lg'} color='#3F51B5' icon={faAngleRight} />
             <TextIdStyled>{text}</TextIdStyled>

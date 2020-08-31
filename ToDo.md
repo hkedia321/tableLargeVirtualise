@@ -1,3 +1,4 @@
 - implement infinite scrolling (main) & table scroll
 - smooth width transition
 - write tests
+- optimize (memo, loading size, rerenders)

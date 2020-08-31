@@ -8,7 +8,7 @@ const LoaderStyled = styled((props)=> <div {...props}/>)`
 
 function Loader() {
     return (
-        <LoaderStyled align="center">
+        <LoaderStyled data-testid="loader" align="center">
         <PuffLoader
           size={100}
           color={"#123abc"}

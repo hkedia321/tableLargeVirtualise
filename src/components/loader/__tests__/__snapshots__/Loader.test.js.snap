@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  align="center"
+  className="sc-AxjAm bqAWmr"
+  data-testid="loader"
+>
+  <div
+    className="css-m2td1u"
+  >
+    <div
+      className="css-5a4nd"
+    />
+    <div
+      className="css-69adw1"
+    />
+  </div>
+</div>
+`;

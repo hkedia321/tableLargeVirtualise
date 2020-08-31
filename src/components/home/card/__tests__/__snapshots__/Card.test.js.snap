@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+.c1 {
+  border-bottom: solid 1px #eee;
+}
+
+.c3 {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.c4 {
+  font-weight: normal;
+  margin-top: 0;
+  color: #767676;
+  font-weight: bold;
+}
+
+.c2 {
+  float: right;
+  cursor: pointer;
+  margin-top: 20px;
+  -webkit-animation: null;
+  animation: null;
+}
+
+.c0 {
+  background-color: #fff;
+  padding: 0 15px 25px;
+  box-shadow: #eee 2px 2px;
+  margin: 30px auto;
+  width: 80%;
+}
+
+.c5 {
+  padding: 20px 0px;
+}
+
+<div
+  className="c0"
+  data-testid="card"
+>
+  <div
+    className="c1"
+    data-testid="cardHead"
+  >
+    <svg
+      aria-hidden="true"
+      className="svg-inline--fa fa-redo-alt fa-w-16 c2"
+      data-icon="redo-alt"
+      data-prefix="fas"
+      data-tip="Reload Data"
+      focusable="false"
+      onClick={[Function]}
+      role="img"
+      style={Object {}}
+      viewBox="0 0 512 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M256.455 8c66.269.119 126.437 26.233 170.859 68.685l35.715-35.715C478.149 25.851 504 36.559 504 57.941V192c0 13.255-10.745 24-24 24H345.941c-21.382 0-32.09-25.851-16.971-40.971l41.75-41.75c-30.864-28.899-70.801-44.907-113.23-45.273-92.398-.798-170.283 73.977-169.484 169.442C88.764 348.009 162.184 424 256 424c41.127 0 79.997-14.678 110.629-41.556 4.743-4.161 11.906-3.908 16.368.553l39.662 39.662c4.872 4.872 4.631 12.815-.482 17.433C378.202 479.813 319.926 504 256 504 119.034 504 8.001 392.967 8 256.002 7.999 119.193 119.646 7.755 256.455 8z"
+        fill="currentColor"
+        style={Object {}}
+      />
+    </svg>
+    <h3
+      className="c3"
+    >
+      testing title
+    </h3>
+    <h4
+      className="c4"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "testing subtitle",
+        }
+      }
+    />
+    <div>
+      {"place":"bottom","effect":"solid"}
+    </div>
+  </div>
+  <div
+    className="c5"
+  />
+</div>
+`;

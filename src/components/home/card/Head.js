@@ -27,7 +27,7 @@ const FontAwesomeIconStyled = styled(({isLoading, ...rest}) => <FontAwesomeIcon 
 
 function Head(props) {
     return (
-        <HeadStyled>
+        <HeadStyled data-testid="cardHead">
             <FontAwesomeIconStyled isLoading={props.isLoading} data-tip="Reload Data" icon={faRedoAlt} onClick={props.fetchTableData} />
             <HeadingText>{props.title}</HeadingText>
             <HeadingSubText dangerouslySetInnerHTML={{__html: props.subtitle}}></HeadingSubText>

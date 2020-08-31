@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  id="MockedHighcharts"
+>
+  {"chart":{"type":"area","height":"43.75%","margin":0},"credits":{"enabled":false},"title":false,"legend":{"enabled":false},"xAxis":{"labels":{"enabled":false},"title":false,"tickLength":0,"lineColor":"transparent"},"yAxis":{"labels":{"enabled":false},"title":false,"gridLineWidth":0},"plotOptions":{"series":{"fillColor":"#eaebfe","color":"#c8c9ff","marker":{"radius":2.5}}},"tooltip":{},"series":[{"data":[["2020-01-01",120],["2020-01-02",175],["2020-01-03",140],["2020-01-04",240],["2020-01-05",200],["2020-01-06",202],["2020-01-07",103],["2020-01-08",35],["2020-01-09",50],["2020-01-10",130]]}]}
+</div>
+`;

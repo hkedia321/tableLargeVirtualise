@@ -18,7 +18,7 @@ const CardBody = styled.div`
 
 const Card = React.memo(function(props) {
     return (
-        <CardStyled>
+        <CardStyled data-testid="card">
             <Head fetchTableData={props.fetchTableData} title={props.title} isLoading={props.isLoading} subtitle={props.subtitle} />
             <CardBody>
                 {props.children}
