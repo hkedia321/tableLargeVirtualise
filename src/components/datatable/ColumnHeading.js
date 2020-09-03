@@ -29,7 +29,6 @@ const TotalAmount = styled.h4`
 const ColumnHeading = React.memo(function(props){
 
     const { text, columnKey, data, isGraphHeader, isOpen } = props;
-    console.log("ColumnHeading isOpen:" + isOpen);
     const total = isGraphHeader && data.reduce((total, campaignItem)=> total + 
     campaignItem.trend.reduce((campaignTotal, dayItem) => campaignTotal + dayItem[columnKey],0) ,0);
     return (

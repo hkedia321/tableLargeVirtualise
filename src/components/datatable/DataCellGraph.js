@@ -26,7 +26,7 @@ const DataCellGraph = React.memo(function(props) {
         const graphData = rowData.trend.map(dayData => [dayData.day, dayData[columnObject.key]])
         const total = rowData.trend.reduce((total, dayData) => total + dayData[columnObject.key], 0)
         return (
-         <DataCellStyled>
+         <DataCellStyled data-testid="dataCellGraph">
             {isOpen && <>
             <TotalHeading>{utils.formatCurrencyForDisplay(total)}</TotalHeading>
             <Graph data={graphData} total={total} />

@@ -2,7 +2,7 @@ import { call, put, takeLeading } from 'redux-saga/effects';
 import { fetchJsonWrapper } from './asyncWrappers/fetchJsonWrapper';
 import { REQUEST_TABLE_DATA, SUCCESS_TABLE_DATA, ERROR_TABLE_DATA } from '../actions/actionTypes';
 
-const BASE_URL = "https://clarisights-users.s3.eu-central-1.amazonaws.com"; 
+const BASE_URL = process.env.REACT_APP_BASE_API_URL; 
 
 export function* fetchData(action) {
     try {

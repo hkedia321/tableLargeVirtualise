@@ -46,7 +46,7 @@ const DataTable = function(props) {
     return (
         <>
     {props.show && 
-        <TableStyled>
+        <TableStyled data-testid="datatable">
             <thead>
                 <HeaderRowStyled>
                     <ColumnHeading 

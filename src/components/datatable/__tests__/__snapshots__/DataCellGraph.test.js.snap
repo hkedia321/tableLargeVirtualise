@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+.c1 {
+  position: absolute;
+  z-index: 1;
+  font-weight: normal;
+  right: 20px;
+  top: -5px;
+  text-align: right;
+  color: #3f3f3f;
+}
+
+.c0 {
+  position: relative;
+  padding: 10px;
+  width: auto;
+  padding-top: 30px;
+}
+
+<td
+  className="c0"
+  data-testid="dataCellGraph"
+>
+  <h4
+    className="c1"
+  >
+    € 
+    344
+  </h4>
+  <div
+    id="MockedHighcharts"
+  >
+    {"chart":{"type":"area","height":"43.75%","margin":0},"credits":{"enabled":false},"title":false,"legend":{"enabled":false},"xAxis":{"labels":{"enabled":false},"title":false,"tickLength":0,"lineColor":"transparent"},"yAxis":{"labels":{"enabled":false},"title":false,"gridLineWidth":0},"plotOptions":{"series":{"fillColor":"#eaebfe","color":"#c8c9ff","marker":{"radius":2.5}}},"tooltip":{},"series":[{"data":[["2020-06-01",178],["2020-06-02",166]]}]}
+  </div>
+</td>
+`;

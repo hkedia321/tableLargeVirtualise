@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+.c4 {
+  position: absolute;
+  z-index: 1;
+  font-weight: normal;
+  right: 20px;
+  top: -5px;
+  text-align: right;
+  color: #3f3f3f;
+}
+
+.c3 {
+  position: relative;
+  padding: 10px;
+  width: auto;
+  padding-top: 30px;
+}
+
+.c0 {
+  position: relative;
+  padding: 20px;
+}
+
+.c1 {
+  padding-right: 10px;
+  width: 20px;
+}
+
+.c2 {
+  width: calc(100% - 25px);
+  display: inline-block;
+}
+
+<tr
+  data-testid="recordRow"
+>
+  <td
+    className="c0"
+    data-testid="dataCellCampaignId"
+  >
+    <svg
+      aria-hidden="true"
+      className="svg-inline--fa fa-angle-right fa-w-8 fa-lg c1"
+      color="#3F51B5"
+      data-icon="angle-right"
+      data-prefix="fas"
+      focusable="false"
+      role="img"
+      style={Object {}}
+      viewBox="0 0 256 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+        fill="currentColor"
+        style={Object {}}
+      />
+    </svg>
+    <span
+      className="c2"
+    >
+      713a8eee-3922-403a-9783-0db899c54ead
+    </span>
+  </td>
+  <td
+    className="c3"
+    data-testid="dataCellGraph"
+  >
+    <h4
+      className="c4"
+    >
+      € 
+      4,972
+    </h4>
+    <div
+      id="MockedHighcharts"
+    >
+      {"chart":{"type":"area","height":"43.75%","margin":0},"credits":{"enabled":false},"title":false,"legend":{"enabled":false},"xAxis":{"labels":{"enabled":false},"title":false,"tickLength":0,"lineColor":"transparent"},"yAxis":{"labels":{"enabled":false},"title":false,"gridLineWidth":0},"plotOptions":{"series":{"fillColor":"#eaebfe","color":"#c8c9ff","marker":{"radius":2.5}}},"tooltip":{},"series":[{"data":[["2020-06-01",2496],["2020-06-02",2476]]}]}
+    </div>
+  </td>
+  <td
+    className="c3"
+    data-testid="dataCellGraph"
+  >
+    <h4
+      className="c4"
+    >
+      € 
+      349
+    </h4>
+    <div
+      id="MockedHighcharts"
+    >
+      {"chart":{"type":"area","height":"43.75%","margin":0},"credits":{"enabled":false},"title":false,"legend":{"enabled":false},"xAxis":{"labels":{"enabled":false},"title":false,"tickLength":0,"lineColor":"transparent"},"yAxis":{"labels":{"enabled":false},"title":false,"gridLineWidth":0},"plotOptions":{"series":{"fillColor":"#eaebfe","color":"#c8c9ff","marker":{"radius":2.5}}},"tooltip":{},"series":[{"data":[["2020-06-01",182],["2020-06-02",167]]}]}
+    </div>
+  </td>
+</tr>
+`;

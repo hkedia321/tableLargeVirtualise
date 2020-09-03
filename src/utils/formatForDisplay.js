@@ -6,7 +6,7 @@ const numberFormatOptions = {
 };
 
 export const formatCurrencyForDisplay = (number) => {
-return <>&euro; {Number(number).toLocaleString('en', numberFormatOptions)}</>;
+return <>&euro;&nbsp;{Number(number).toLocaleString('en', numberFormatOptions)}</>;
 }
 
 export const formatDateForDisplay = (value) => {

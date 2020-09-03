@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import PropTypes from 'prop-types';
 import NavHeader from 'components/navHeader';
 import Card from './card';
 import DataTable from 'components/datatable';
@@ -29,32 +30,31 @@ const extractEndingDate = (tableData) => {
     return null;
 }
 
-
-
-const Home = (props) => {
+export const Home = (props) => {
 
     useEffect(() => {
         fetchTableData(props);
         // eslint-disable-next-line react-hooks/exhaustive-deps
       },[])
-      const startingDate = extractStartingDate(props.tableData);
-      const endingDate = extractEndingDate(props.tableData);
+      const { tableData } = props;
+      const startingDate = extractStartingDate(tableData);
+      const endingDate = extractEndingDate(tableData);
       const subtitle = `Showing Data From ${utils.formatDateForDisplay(startingDate)} to ${utils.formatDateForDisplay(endingDate)}`;
-    return (
-        <>
+      return (
+        <div data-testid="home">
         <NavHeader />
         <Card 
          fetchTableData = {fetchTableData.bind(null, props)} 
          title = {CARD_TITLE}
-         subtitle = {(props.tableData.fetched && props.tableData.data.length !== 0 && subtitle) || ''}
-         isLoading = {!(props.tableData.fetched)}
+         subtitle = {(tableData.fetched && tableData.data.length !== 0 && subtitle) || ''}
+         isLoading = {!(tableData.fetched)}
          >
-        <DataTable data = {props.tableData.data} show={props.tableData.fetched && props.tableData.data.length !== 0} />
-        {props.tableData.fetched && !props.tableData.data && <ErrorDisplay message = {props.tableData.errorMsg}  />}
-        {!props.tableData.fetched && <Loader /> }
+        <DataTable data = {tableData.data} show={tableData.fetched && tableData.data.length !== 0} />
+        {tableData.fetched && !tableData.data && <ErrorDisplay message = {tableData.errorMsg}  />}
+        {!tableData.fetched && <Loader /> }
         </Card>
         
-        </>
+        </div>
     )
 }
 
@@ -66,5 +66,9 @@ const mapDispatchToProps = dispatch => {
     return { 
         requestTableDataAction: bindActionCreators(requestTableDataFunctions, dispatch)
     }
+}
+Home.propTypes = {
+    requestTableDataAction: PropTypes.object,
+    tableData: PropTypes.object
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
