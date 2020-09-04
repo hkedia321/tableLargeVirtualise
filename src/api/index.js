@@ -1,6 +1,6 @@
 import fetch from 'isomorphic-fetch';
 
-export const fetchJsonWrapper = ( url, method = 'GET' ) => {
+const api = ( url, method = 'GET' ) => {
 
   return fetch( url, { method: method } )
     .then( response => {
@@ -18,3 +18,5 @@ export const fetchJsonWrapper = ( url, method = 'GET' ) => {
     });
 
 };
+
+export default api;

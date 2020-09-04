@@ -269,8 +269,7 @@ exports[`matches snapshot 1`] = `
                 <h4
                   class="c14"
                 >
-                  € 
-                  344
+                  € 344
                 </h4>
                 <div>
                   react-tooltip
@@ -301,8 +300,7 @@ exports[`matches snapshot 1`] = `
                 <h4
                   class="c14"
                 >
-                  € 
-                  35
+                  € 35
                 </h4>
                 <div>
                   react-tooltip
@@ -347,8 +345,7 @@ exports[`matches snapshot 1`] = `
                 <h4
                   class="c19"
                 >
-                  € 
-                  344
+                  € 344
                 </h4>
                 <div
                   id="MockedHighcharts"
@@ -363,8 +360,7 @@ exports[`matches snapshot 1`] = `
                 <h4
                   class="c19"
                 >
-                  € 
-                  35
+                  € 35
                 </h4>
                 <div
                   id="MockedHighcharts"

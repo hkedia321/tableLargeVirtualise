@@ -1,12 +1,10 @@
-import React from 'react';
-
 const numberFormatOptions = { 
     minimumFractionDigits: 0,
     maximumFractionDigits: 2 
 };
 
 export const formatCurrencyForDisplay = (number) => {
-return <>&euro;&nbsp;{Number(number).toLocaleString('en', numberFormatOptions)}</>;
+return `&euro;&nbsp;${Number(number).toLocaleString('en', numberFormatOptions)}`
 }
 
 export const formatDateForDisplay = (value) => {

@@ -138,10 +138,12 @@ exports[`matches snapshot 1`] = `
         </svg>
         <h4
           className="c5"
-        >
-          € 
-          178
-        </h4>
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "&euro;&nbsp;178",
+            }
+          }
+        />
         <div>
           react-tooltip
         </div>
@@ -173,10 +175,12 @@ exports[`matches snapshot 1`] = `
         </svg>
         <h4
           className="c5"
-        >
-          € 
-          14
-        </h4>
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "&euro;&nbsp;14",
+            }
+          }
+        />
         <div>
           react-tooltip
         </div>
@@ -221,10 +225,12 @@ exports[`matches snapshot 1`] = `
       >
         <h4
           className="c10"
-        >
-          € 
-          178
-        </h4>
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "&euro;&nbsp;178",
+            }
+          }
+        />
         <div
           id="MockedHighcharts"
         >
@@ -237,10 +243,12 @@ exports[`matches snapshot 1`] = `
       >
         <h4
           className="c10"
-        >
-          € 
-          14
-        </h4>
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "&euro;&nbsp;14",
+            }
+          }
+        />
         <div
           id="MockedHighcharts"
         >

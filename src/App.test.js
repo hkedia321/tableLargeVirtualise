@@ -1,17 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import renderer from 'react-test-renderer';
-import { render } from '@testing-library/react';
+
+import { render, cleanup } from 'test-utils';
 import App from './App';
 
-// test('renders learn react link', () => {
-  // const { getByText } = render(<App />);
-  // const linkElement = getByText(/learn react/i);
-  // expect(linkElement).toBeInTheDocument();
-// });
+const initialState ={
+  tableData : {   
+      data: [], 
+      fetched: true, 
+      error: null, 
+      errorMsg: null 
+  } 
+}
 
-test('renders without crashing', () => {
-  // const div = document.createElement("div");
-  // ReactDOM.render(<App/>, div);
-  // ReactDOM.unmountComponentAtNode(div);
-});
+afterEach(cleanup);
+it('renders Home without crashing', () => {
+  const { getByTestId } = render(<App />, { initialState });
+  expect(getByTestId('app'));
+})

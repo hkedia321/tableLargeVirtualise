@@ -28,7 +28,7 @@ const DataCellGraph = React.memo(function(props) {
         return (
          <DataCellStyled data-testid="dataCellGraph">
             {isOpen && <>
-            <TotalHeading>{utils.formatCurrencyForDisplay(total)}</TotalHeading>
+            <TotalHeading dangerouslySetInnerHTML={{ __html: utils.formatCurrencyForDisplay(total)}}></TotalHeading>
             <Graph data={graphData} total={total} />
             </>
             }

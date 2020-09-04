@@ -34,7 +34,7 @@ const ColumnHeading = React.memo(function(props){
     return (
         <TableHeadingCell isGraphHeader={isGraphHeader} isOpen={isOpen}>
             {text} <FontAwesomeIconStyled key={isOpen? 'is-open' : 'not-open'} data-tip data-for='columnCollapseTooltip' isOpen={isOpen} icon={faCaretDown} onClick={props.handleToggleColumnShow} />
-            {isGraphHeader && <TotalAmount>{utils.formatCurrencyForDisplay(total)}</TotalAmount>}
+            {isGraphHeader && <TotalAmount dangerouslySetInnerHTML={{ __html:utils.formatCurrencyForDisplay(total)}}></TotalAmount>}
 
             {isOpen && <ReactTooltip id='columnCollapseTooltip' place='bottom' effect='solid'>
                  <span>Hide Column</span>

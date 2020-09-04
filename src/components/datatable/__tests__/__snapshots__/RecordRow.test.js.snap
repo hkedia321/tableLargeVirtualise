@@ -70,10 +70,12 @@ exports[`matches snapshot 1`] = `
   >
     <h4
       className="c4"
-    >
-      € 
-      4,972
-    </h4>
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "&euro;&nbsp;4,972",
+        }
+      }
+    />
     <div
       id="MockedHighcharts"
     >
@@ -86,10 +88,12 @@ exports[`matches snapshot 1`] = `
   >
     <h4
       className="c4"
-    >
-      € 
-      349
-    </h4>
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "&euro;&nbsp;349",
+        }
+      }
+    />
     <div
       id="MockedHighcharts"
     >
