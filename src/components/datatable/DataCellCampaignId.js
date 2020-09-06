@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
-const DataCellStyled = styled.td`
+const DataCellStyled = styled.div`
     position: relative;
     padding: 20px;
 `;
@@ -21,15 +21,15 @@ const TextIdStyled = styled.span`
 
 `;
 
-const DataCellCampaignId = React.memo(function(props) {
+const DataCellCampaignId = function(props) {
     const { text, isOpen } = props;
-    return <DataCellStyled data-testid="dataCellCampaignId">
+    return <DataCellStyled className="dataCellCampaignId" style={props.style} data-testid="dataCellCampaignId">
         {isOpen && <>
         <FontAwesomeIconStyled size={'lg'} color='#3F51B5' icon={faAngleRight} />
             <TextIdStyled>{text}</TextIdStyled>
             </>}
         </DataCellStyled>
-})
+}
 
 export default DataCellCampaignId;
 

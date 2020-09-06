@@ -1,8 +1,13 @@
-import React, {useState} from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { VariableSizeGrid as Grid } from "react-window";
+import AutoSizer from "react-virtualized-auto-sizer";
 import * as StyledComponents from './DataTableStyledComponents';
 import ColumnHeading from './ColumnHeading';
+
+import DataCellGraph from './DataCellGraph';
+import DataCellCampaignId from './DataCellCampaignId';
 import RecordRow from './RecordRow';
 
 const dataTableGraphRecords = [
@@ -35,6 +40,15 @@ const DataTable = function(props) {
 
     const [campaignColumnOpen, setCampaignColumnOpen] = useState(true);
     const [graphColumnsOpenArray, setGraphColumnsOpenArray] = useState(new Array(dataTableGraphRecords.length).fill(true));
+    
+    const column0Ref = useRef(null);
+    const column1Ref = useRef(null);
+    const column2Ref = useRef(null);
+
+    useEffect(() => {
+        console.log("LOGGINGG")
+        console.log(column0Ref.current);
+    }, [])
 
     const handleToggleGraphColumnShow = (index) => {
         setGraphColumnsOpenArray(prev => 
@@ -42,15 +56,62 @@ const DataTable = function(props) {
             .concat(!prev[index])
             .concat(prev.slice(index+1)))
     }
-
+    const handleToggleCampaignIdColumnShow = () => {
+        setCampaignColumnOpen(prev => !prev)
+        // for reflowing highchart
+        window.dispatchEvent(new Event('resize'));
+    }
+ 
+    const Cell = ({ columnIndex, rowIndex, style }) => {
+        console.log(rowIndex, columnIndex);
+        const rowData = props.data[rowIndex];
+        const isCampaignColumnOpen = campaignColumnOpen;
+        
+        if (columnIndex === 0) {
+           return <DataCellCampaignId style={style} text={rowData.groups.Campaign.metadata.name} isOpen={isCampaignColumnOpen} />
+        }
+        else {
+            const columnObject = dataTableGraphRecords[columnIndex-1];
+            return <DataCellGraph style={style} isOpen={graphColumnsOpenArray[columnIndex - 1]} columnObject={columnObject} rowData={rowData}  />
+        }
+        
+    }
+   
     return (
         <>
     {props.show && 
-        <TableStyled data-testid="datatable">
+        <>
+            <div className="dataTableWrap">
+                {/* <table>
+                    <thead>
+                        <tr>
+                            <th style={{width: '350px'}}>Campaign Id</th>
+                            <th style={{width: '450px'}}>App and Installs</th>
+                            <th style={{width: '450px'}}>CoH Real Acquisition</th>
+                        </tr>
+                    </thead>
+                </table>
+            <AutoSizer>
+                {({ height, width }) => (
+                <Grid
+                    className="Grid"
+                    height={height}
+                    columnCount={3}
+                    rowCount={props.data.length}
+                    width={width}
+                    rowHeight={() => 250}
+                    columnWidth={(index)=>index === 0? 350: 450}
+                >
+                    {Cell}
+                </Grid>
+                 )}
+            </AutoSizer>  */}
+
+<TableStyled data-testid="datatable">
             <thead>
                 <HeaderRowStyled>
                     <ColumnHeading 
-                        handleToggleColumnShow={()=>setCampaignColumnOpen(prev => !prev)} 
+                        handleToggleColumnShow={handleToggleCampaignIdColumnShow} 
                         text="Campaign Id" 
                         isGraphHeader={false} 
                         isOpen={campaignColumnOpen} 
@@ -69,19 +130,26 @@ const DataTable = function(props) {
                 </HeaderRowStyled>
             </thead>
             <tbody>
-                {props.data.map((item, index) => {
-                    return (
-                        <RecordRow
-                         key={index} 
-                         isCampaignColumnOpen={campaignColumnOpen} 
-                         isGraphColumnsOpenArray={graphColumnsOpenArray}
-                         rowData={item} 
-                         dataTableGraphRecords={dataTableGraphRecords} 
-                         />
-                    )
-                })}
+                <AutoSizer>
+                {({ height, width }) => (
+                <Grid
+                    className="Grid"
+                    height={height}
+                    columnCount={3}
+                    rowCount={props.data.length}
+                    width={width}
+                    rowHeight={() => 250}
+                    columnWidth={(index)=>440}
+                >
+                    {Cell}
+                </Grid>
+                 )}
+            </AutoSizer>
             </tbody>
         </TableStyled>
+            
+            </div>
+        </>
     }
     <StyledComponents.GlobalStyle/>
     </>

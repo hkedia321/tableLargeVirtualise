@@ -6,7 +6,7 @@ import DataCellCampaignId from './DataCellCampaignId';
 const RecordRow = React.memo(function(props) {
     const { rowData, dataTableGraphRecords, isCampaignColumnOpen, isGraphColumnsOpenArray } = props;
     return (
-        <tr data-testid="recordRow">
+        <tr className="rowDiv" data-testid="recordRow" style={props.style}>
             <DataCellCampaignId text={rowData.groups.Campaign.metadata.name} isOpen={isCampaignColumnOpen} />
             {dataTableGraphRecords.map((columnObject, index) => 
                 <DataCellGraph key={index} isOpen={isGraphColumnsOpenArray[index]} columnObject={columnObject} rowData={rowData}  />
@@ -20,7 +20,8 @@ RecordRow.propTypes = {
     dataTableGraphRecords: PropTypes.array,
     rowData: PropTypes.object,
     isCampaignColumnOpen: PropTypes.bool,
-    isGraphColumnsOpenArray: PropTypes.array
+    isGraphColumnsOpenArray: PropTypes.array,
+    style: PropTypes.object
 }
 
 export default RecordRow;

@@ -19,7 +19,7 @@ export default function(state = initialState, action) {
       };
     }
     case SUCCESS_TABLE_DATA: {
-        const tableData = action.payload.data.data.slice(0,10)
+        const tableData = action.payload.data.data
         return {
             ...state,
             data: tableData,

@@ -14,19 +14,19 @@ const TotalHeading = styled.h4`
     color: #3f3f3f;
 `;
 
-const DataCellStyled = styled.td`
+const DataCellStyled = styled.div`
     position: relative;
     padding: 10px;
     width: auto;
     padding-top: 30px;
 `;
 
-const DataCellGraph = React.memo(function(props) {
+const DataCellGraph = function(props) {
         const { columnObject, rowData, isOpen } = props;
         const graphData = rowData.trend.map(dayData => [dayData.day, dayData[columnObject.key]])
         const total = rowData.trend.reduce((total, dayData) => total + dayData[columnObject.key], 0)
         return (
-         <DataCellStyled data-testid="dataCellGraph">
+         <DataCellStyled className="dataCellGraph" style={props.style} data-testid="dataCellGraph">
             {isOpen && <>
             <TotalHeading dangerouslySetInnerHTML={{ __html: utils.formatCurrencyForDisplay(total)}}></TotalHeading>
             <Graph data={graphData} total={total} />
@@ -34,7 +34,7 @@ const DataCellGraph = React.memo(function(props) {
             }
         </DataCellStyled>
         )
-})
+}
 
 export default DataCellGraph;
 

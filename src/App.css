@@ -7,3 +7,16 @@ body {
     transform:rotate(360deg); 
   } 
 }
+
+.dataTableWrap {
+  height: 700px;
+  overflow-x: hidden;
+}
+.rowDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+table {
+  border-collapse: collapse;
+}
