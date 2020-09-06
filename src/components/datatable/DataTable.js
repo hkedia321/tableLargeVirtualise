@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { VariableSizeGrid as Grid } from "react-window";
@@ -8,7 +8,6 @@ import ColumnHeading from './ColumnHeading';
 
 import DataCellGraph from './DataCellGraph';
 import DataCellCampaignId from './DataCellCampaignId';
-import RecordRow from './RecordRow';
 
 const dataTableGraphRecords = [
     {
@@ -40,15 +39,6 @@ const DataTable = function(props) {
 
     const [campaignColumnOpen, setCampaignColumnOpen] = useState(true);
     const [graphColumnsOpenArray, setGraphColumnsOpenArray] = useState(new Array(dataTableGraphRecords.length).fill(true));
-    
-    const column0Ref = useRef(null);
-    const column1Ref = useRef(null);
-    const column2Ref = useRef(null);
-
-    useEffect(() => {
-        console.log("LOGGINGG")
-        console.log(column0Ref.current);
-    }, [])
 
     const handleToggleGraphColumnShow = (index) => {
         setGraphColumnsOpenArray(prev => 

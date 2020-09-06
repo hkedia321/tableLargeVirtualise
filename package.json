@@ -2,7 +2,7 @@
   "name": "tablesrenderapp",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://hkedia321.github.io/tableLargeRecordsGraph/",
+  "homepage": "https://large-table-render-virtualize.netlify.app/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
