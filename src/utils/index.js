@@ -1,1 +1,1 @@
-export * from './formatForDisplay'
+export * from "./formatForDisplay"

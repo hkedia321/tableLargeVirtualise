@@ -18,8 +18,8 @@ exports[`matches snapshot 1`] = `
   padding-top: 30px;
 }
 
-<td
-  className="c0"
+<div
+  className="c0 dataCellGraph"
   data-testid="dataCellGraph"
 >
   <h4
@@ -35,5 +35,5 @@ exports[`matches snapshot 1`] = `
   >
     {"chart":{"type":"area","height":"43.75%","margin":0},"credits":{"enabled":false},"title":false,"legend":{"enabled":false},"xAxis":{"labels":{"enabled":false},"title":false,"tickLength":0,"lineColor":"transparent"},"yAxis":{"labels":{"enabled":false},"title":false,"gridLineWidth":0},"plotOptions":{"series":{"fillColor":"#eaebfe","color":"#c8c9ff","marker":{"radius":2.5}}},"tooltip":{},"series":[{"data":[["2020-06-01",178],["2020-06-02",166]]}]}
   </div>
-</td>
+</div>
 `;

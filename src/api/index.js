@@ -1,22 +1,15 @@
-import fetch from 'isomorphic-fetch';
+import fetch from "isomorphic-fetch"
 
-const api = ( url, method = 'GET' ) => {
-
-  return fetch( url, { method: method } )
-    .then( response => {
-      if ( !response.ok ) {
-        throw response; // Send "bad" response to catch()
+const api = (url, method = "GET") =>
+  fetch(url, { method })
+    .then((response) => {
+      if (!response.ok) {
+        throw response // Send "bad" response to catch()
       } else {
-        return response.json(); 
+        return response.json()
       }
     })
-    .then( response => {
-      return { ...response, ...{ ok: true } };
-    })
-    .catch( response => {
-      return { ...response, ...{ ok: false } };
-    });
+    .then((response) => ({ ...response, ...{ ok: true } }))
+    .catch((response) => ({ ...response, ...{ ok: false } }))
 
-};
-
-export default api;
+export default api

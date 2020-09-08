@@ -1,4 +1,4 @@
-import { combineReducers } from "redux";
-import tableData from "./tableData";
+import { combineReducers } from "redux"
+import tableData from "./tableData"
 
-export default combineReducers({ tableData });
+export default combineReducers({ tableData })

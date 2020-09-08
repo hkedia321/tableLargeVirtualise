@@ -1,4 +1,3 @@
-export const initialState = {
-    tableData: {
-    }
-};
+export default {
+  tableData: {},
+}

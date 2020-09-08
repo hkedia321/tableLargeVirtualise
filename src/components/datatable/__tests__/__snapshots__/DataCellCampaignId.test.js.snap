@@ -16,8 +16,8 @@ exports[`matches snapshot 1`] = `
   display: inline-block;
 }
 
-<td
-  className="c0"
+<div
+  className="c0 dataCellCampaignId"
   data-testid="dataCellCampaignId"
 >
   <svg
@@ -43,5 +43,5 @@ exports[`matches snapshot 1`] = `
   >
     campaign id text
   </span>
-</td>
+</div>
 `;

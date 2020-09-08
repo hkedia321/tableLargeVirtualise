@@ -34,10 +34,11 @@ exports[`matches snapshot 1`] = `
 }
 
 <tr
+  className="rowDiv"
   data-testid="recordRow"
 >
-  <td
-    className="c0"
+  <div
+    className="c0 dataCellCampaignId"
     data-testid="dataCellCampaignId"
   >
     <svg
@@ -63,9 +64,9 @@ exports[`matches snapshot 1`] = `
     >
       713a8eee-3922-403a-9783-0db899c54ead
     </span>
-  </td>
-  <td
-    className="c3"
+  </div>
+  <div
+    className="c3 dataCellGraph"
     data-testid="dataCellGraph"
   >
     <h4
@@ -81,9 +82,9 @@ exports[`matches snapshot 1`] = `
     >
       {"chart":{"type":"area","height":"43.75%","margin":0},"credits":{"enabled":false},"title":false,"legend":{"enabled":false},"xAxis":{"labels":{"enabled":false},"title":false,"tickLength":0,"lineColor":"transparent"},"yAxis":{"labels":{"enabled":false},"title":false,"gridLineWidth":0},"plotOptions":{"series":{"fillColor":"#eaebfe","color":"#c8c9ff","marker":{"radius":2.5}}},"tooltip":{},"series":[{"data":[["2020-06-01",2496],["2020-06-02",2476]]}]}
     </div>
-  </td>
-  <td
-    className="c3"
+  </div>
+  <div
+    className="c3 dataCellGraph"
     data-testid="dataCellGraph"
   >
     <h4
@@ -99,6 +100,6 @@ exports[`matches snapshot 1`] = `
     >
       {"chart":{"type":"area","height":"43.75%","margin":0},"credits":{"enabled":false},"title":false,"legend":{"enabled":false},"xAxis":{"labels":{"enabled":false},"title":false,"tickLength":0,"lineColor":"transparent"},"yAxis":{"labels":{"enabled":false},"title":false,"gridLineWidth":0},"plotOptions":{"series":{"fillColor":"#eaebfe","color":"#c8c9ff","marker":{"radius":2.5}}},"tooltip":{},"series":[{"data":[["2020-06-01",182],["2020-06-02",167]]}]}
     </div>
-  </td>
+  </div>
 </tr>
 `;

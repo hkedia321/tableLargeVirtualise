@@ -18,6 +18,47 @@ exports[`matches snapshot 1`] = `
   cursor: pointer;
 }
 
+.c12 {
+  cursor: pointer;
+}
+
+.c11 {
+  padding: 10px;
+  text-align: right;
+  width: auto;
+  color: #4b4b4b;
+  font-weight: normal;
+  padding-bottom: 25px;
+}
+
+.c13 {
+  padding: 10px;
+  text-align: right;
+  width: auto;
+  color: #4b4b4b;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+
+.c14 {
+  margin: 0px;
+  color: #7f7f7f;
+  font-weight: normal;
+}
+
+.c9 {
+  width: 100%;
+  table-layout: fixed;
+  height: 90vh;
+  overflow-y: scroll;
+  border-collapse: collapse;
+}
+
+.c10 {
+  background: #f2f2f2;
+  padding: 15px;
+}
+
 .c4 {
   border-bottom: solid 1px #eee;
 }
@@ -52,79 +93,6 @@ exports[`matches snapshot 1`] = `
 
 .c8 {
   padding: 20px 0px;
-}
-
-.c12 {
-  cursor: pointer;
-}
-
-.c11 {
-  padding: 10px;
-  text-align: right;
-  width: auto;
-  color: #4b4b4b;
-  font-weight: normal;
-  padding-bottom: 25px;
-}
-
-.c13 {
-  padding: 10px;
-  text-align: right;
-  width: auto;
-  color: #4b4b4b;
-  font-weight: normal;
-  padding-bottom: 10px;
-}
-
-.c14 {
-  margin: 0px;
-  color: #7f7f7f;
-  font-weight: normal;
-}
-
-.c19 {
-  position: absolute;
-  z-index: 1;
-  font-weight: normal;
-  right: 20px;
-  top: -5px;
-  text-align: right;
-  color: #3f3f3f;
-}
-
-.c18 {
-  position: relative;
-  padding: 10px;
-  width: auto;
-  padding-top: 30px;
-}
-
-.c15 {
-  position: relative;
-  padding: 20px;
-}
-
-.c16 {
-  padding-right: 10px;
-  width: 20px;
-}
-
-.c17 {
-  width: calc(100% - 25px);
-  display: inline-block;
-}
-
-.c9 {
-  width: 100%;
-  table-layout: fixed;
-  height: 90vh;
-  overflow-y: scroll;
-  border-collapse: collapse;
-}
-
-.c10 {
-  background: #f2f2f2;
-  padding: 15px;
 }
 
 <div>
@@ -210,167 +178,128 @@ exports[`matches snapshot 1`] = `
       <div
         class="c8"
       >
-        <table
-          class="c9"
-          data-testid="datatable"
+        <div
+          class="dataTableWrap"
         >
-          <thead>
-            <tr
-              class="c10"
-            >
-              <th
-                class="c11"
+          <table
+            class="c9"
+            data-testid="datatable"
+          >
+            <thead>
+              <tr
+                class="c10"
               >
-                Campaign Id
-                 
-                <svg
-                  aria-hidden="true"
-                  class="svg-inline--fa fa-caret-down fa-w-10 c12"
-                  data-for="columnCollapseTooltip"
-                  data-icon="caret-down"
-                  data-prefix="fas"
-                  data-tip="true"
-                  focusable="false"
-                  role="img"
-                  viewBox="0 0 320 512"
-                  xmlns="http://www.w3.org/2000/svg"
+                <th
+                  class="c11"
                 >
-                  <path
-                    d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
-                    fill="currentColor"
-                  />
-                </svg>
-                <div>
-                  react-tooltip
-                </div>
-              </th>
-              <th
-                class="c13"
+                  Campaign Id
+                   
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-caret-down fa-w-10 c12"
+                    data-for="columnCollapseTooltip"
+                    data-icon="caret-down"
+                    data-prefix="fas"
+                    data-tip="true"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 320 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <div>
+                    react-tooltip
+                  </div>
+                </th>
+                <th
+                  class="c13"
+                >
+                  App and Installs
+                   
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-caret-down fa-w-10 c12"
+                    data-for="columnCollapseTooltip"
+                    data-icon="caret-down"
+                    data-prefix="fas"
+                    data-tip="true"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 320 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <h4
+                    class="c14"
+                  >
+                    € 344
+                  </h4>
+                  <div>
+                    react-tooltip
+                  </div>
+                </th>
+                <th
+                  class="c13"
+                >
+                  CoH Real Acquisition
+                   
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-caret-down fa-w-10 c12"
+                    data-for="columnCollapseTooltip"
+                    data-icon="caret-down"
+                    data-prefix="fas"
+                    data-tip="true"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 320 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <h4
+                    class="c14"
+                  >
+                    € 35
+                  </h4>
+                  <div>
+                    react-tooltip
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <div
+                style="overflow: visible; height: 0px; width: 0px;"
+              />
+              <div
+                class="resize-triggers"
               >
-                App and Installs
-                 
-                <svg
-                  aria-hidden="true"
-                  class="svg-inline--fa fa-caret-down fa-w-10 c12"
-                  data-for="columnCollapseTooltip"
-                  data-icon="caret-down"
-                  data-prefix="fas"
-                  data-tip="true"
-                  focusable="false"
-                  role="img"
-                  viewBox="0 0 320 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
-                    fill="currentColor"
-                  />
-                </svg>
-                <h4
-                  class="c14"
-                >
-                  € 344
-                </h4>
-                <div>
-                  react-tooltip
-                </div>
-              </th>
-              <th
-                class="c13"
-              >
-                CoH Real Acquisition
-                 
-                <svg
-                  aria-hidden="true"
-                  class="svg-inline--fa fa-caret-down fa-w-10 c12"
-                  data-for="columnCollapseTooltip"
-                  data-icon="caret-down"
-                  data-prefix="fas"
-                  data-tip="true"
-                  focusable="false"
-                  role="img"
-                  viewBox="0 0 320 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
-                    fill="currentColor"
-                  />
-                </svg>
-                <h4
-                  class="c14"
-                >
-                  € 35
-                </h4>
-                <div>
-                  react-tooltip
-                </div>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr
-              data-testid="recordRow"
-            >
-              <td
-                class="c15"
-                data-testid="dataCellCampaignId"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="svg-inline--fa fa-angle-right fa-w-8 fa-lg c16"
-                  color="#3F51B5"
-                  data-icon="angle-right"
-                  data-prefix="fas"
-                  focusable="false"
-                  role="img"
-                  viewBox="0 0 256 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
-                    fill="currentColor"
-                  />
-                </svg>
-                <span
-                  class="c17"
-                >
-                  99733871-f7c5-4b52-9773-1ca69816fc03
-                </span>
-              </td>
-              <td
-                class="c18"
-                data-testid="dataCellGraph"
-              >
-                <h4
-                  class="c19"
-                >
-                  € 344
-                </h4>
                 <div
-                  id="MockedHighcharts"
+                  class="expand-trigger"
                 >
-                  {"chart":{"type":"area","height":"43.75%","margin":0},"credits":{"enabled":false},"title":false,"legend":{"enabled":false},"xAxis":{"labels":{"enabled":false},"title":false,"tickLength":0,"lineColor":"transparent"},"yAxis":{"labels":{"enabled":false},"title":false,"gridLineWidth":0},"plotOptions":{"series":{"fillColor":"#eaebfe","color":"#c8c9ff","marker":{"radius":2.5}}},"tooltip":{},"series":[{"data":[["2020-06-01",178],["2020-06-02",166]]}]}
+                  <div
+                    style="width: 1px; height: 1px;"
+                  />
                 </div>
-              </td>
-              <td
-                class="c18"
-                data-testid="dataCellGraph"
-              >
-                <h4
-                  class="c19"
-                >
-                  € 35
-                </h4>
                 <div
-                  id="MockedHighcharts"
-                >
-                  {"chart":{"type":"area","height":"43.75%","margin":0},"credits":{"enabled":false},"title":false,"legend":{"enabled":false},"xAxis":{"labels":{"enabled":false},"title":false,"tickLength":0,"lineColor":"transparent"},"yAxis":{"labels":{"enabled":false},"title":false,"gridLineWidth":0},"plotOptions":{"series":{"fillColor":"#eaebfe","color":"#c8c9ff","marker":{"radius":2.5}}},"tooltip":{},"series":[{"data":[["2020-06-01",14],["2020-06-02",21]]}]}
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+                  class="contract-trigger"
+                />
+              </div>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
