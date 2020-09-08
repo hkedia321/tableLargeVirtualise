@@ -21,7 +21,7 @@ const TextIdStyled = styled.span`
 
 `;
 
-const DataCellCampaignId = function(props) {
+const DataCellCampaignId = React.memo(function(props) {
     const { text, isOpen } = props;
     return <DataCellStyled className="dataCellCampaignId" style={props.style} data-testid="dataCellCampaignId">
         {isOpen && <>
@@ -29,7 +29,7 @@ const DataCellCampaignId = function(props) {
             <TextIdStyled>{text}</TextIdStyled>
             </>}
         </DataCellStyled>
-}
+})
 
 export default DataCellCampaignId;
 

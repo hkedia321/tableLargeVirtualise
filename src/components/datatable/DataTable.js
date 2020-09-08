@@ -35,7 +35,7 @@ const HeaderRowStyled = styled.tr`
 
 
 
-const DataTable = function(props) {
+const DataTable = React.memo(function(props) {
 
     const [campaignColumnOpen, setCampaignColumnOpen] = useState(true);
     const [graphColumnsOpenArray, setGraphColumnsOpenArray] = useState(new Array(dataTableGraphRecords.length).fill(true));
@@ -53,7 +53,7 @@ const DataTable = function(props) {
     }
  
     const Cell = ({ columnIndex, rowIndex, style }) => {
-        console.log(rowIndex, columnIndex);
+        // console.log(rowIndex, columnIndex);
         const rowData = props.data[rowIndex];
         const isCampaignColumnOpen = campaignColumnOpen;
         
@@ -72,30 +72,6 @@ const DataTable = function(props) {
     {props.show && 
         <>
             <div className="dataTableWrap">
-                {/* <table>
-                    <thead>
-                        <tr>
-                            <th style={{width: '350px'}}>Campaign Id</th>
-                            <th style={{width: '450px'}}>App and Installs</th>
-                            <th style={{width: '450px'}}>CoH Real Acquisition</th>
-                        </tr>
-                    </thead>
-                </table>
-            <AutoSizer>
-                {({ height, width }) => (
-                <Grid
-                    className="Grid"
-                    height={height}
-                    columnCount={3}
-                    rowCount={props.data.length}
-                    width={width}
-                    rowHeight={() => 250}
-                    columnWidth={(index)=>index === 0? 350: 450}
-                >
-                    {Cell}
-                </Grid>
-                 )}
-            </AutoSizer>  */}
 
 <TableStyled data-testid="datatable">
             <thead>
@@ -144,7 +120,7 @@ const DataTable = function(props) {
     <StyledComponents.GlobalStyle/>
     </>
     );
-}
+})
 
 DataTable.propTypes = {
     data: PropTypes.array,
