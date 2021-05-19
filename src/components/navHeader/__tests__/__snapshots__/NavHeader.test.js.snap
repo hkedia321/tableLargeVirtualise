@@ -2,16 +2,12 @@
 
 exports[`matches snapshot 1`] = `
 <div
-  className="sc-AxjAm fTpXxT"
+  className="sc-AxjAm bIDVNz"
   data-testid="navHeader"
 >
-  <img
-    className="sc-AxirZ kDsUVc"
-    src="clarisightsLogo.svg"
-  />
   <svg
     aria-hidden="true"
-    className="svg-inline--fa fa-bars fa-w-14 sc-AxiKw CwSzS"
+    className="svg-inline--fa fa-bars fa-w-14 sc-AxirZ hldjqK"
     data-icon="bars"
     data-prefix="fas"
     focusable="false"

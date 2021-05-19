@@ -6,23 +6,20 @@ exports[`matches snapshot 1`] = `
   padding: 15px 25px;
   border-bottom: 1px solid #d3d3d3;
   box-shadow: #d9d9d9 2px 2px 4px 0px;
+  min-height: 25px;
 }
 
 .c1 {
-  vertical-align: middle;
-}
-
-.c2 {
   float: right;
   margin-top: 4px;
   cursor: pointer;
 }
 
-.c12 {
+.c11 {
   cursor: pointer;
 }
 
-.c11 {
+.c10 {
   padding: 10px;
   text-align: right;
   width: auto;
@@ -31,7 +28,7 @@ exports[`matches snapshot 1`] = `
   padding-bottom: 25px;
 }
 
-.c13 {
+.c12 {
   padding: 10px;
   text-align: right;
   width: auto;
@@ -40,13 +37,13 @@ exports[`matches snapshot 1`] = `
   padding-bottom: 10px;
 }
 
-.c14 {
+.c13 {
   margin: 0px;
   color: #7f7f7f;
   font-weight: normal;
 }
 
-.c9 {
+.c8 {
   width: 100%;
   table-layout: fixed;
   height: 90vh;
@@ -54,28 +51,28 @@ exports[`matches snapshot 1`] = `
   border-collapse: collapse;
 }
 
-.c10 {
+.c9 {
   background: #f2f2f2;
   padding: 15px;
 }
 
-.c4 {
+.c3 {
   border-bottom: solid 1px #eee;
 }
 
-.c6 {
+.c5 {
   display: inline-block;
   margin-bottom: 5px;
 }
 
-.c7 {
+.c6 {
   font-weight: normal;
   margin-top: 0;
   color: #767676;
   font-weight: bold;
 }
 
-.c5 {
+.c4 {
   float: right;
   cursor: pointer;
   margin-top: 20px;
@@ -83,7 +80,7 @@ exports[`matches snapshot 1`] = `
   animation: null;
 }
 
-.c3 {
+.c2 {
   background-color: #fff;
   padding: 0 15px 25px;
   box-shadow: #eee 2px 2px;
@@ -91,7 +88,7 @@ exports[`matches snapshot 1`] = `
   width: 80%;
 }
 
-.c8 {
+.c7 {
   padding: 20px 0px;
 }
 
@@ -103,13 +100,9 @@ exports[`matches snapshot 1`] = `
       class="c0"
       data-testid="navHeader"
     >
-      <img
-        class="c1"
-        src="clarisightsLogo.svg"
-      />
       <svg
         aria-hidden="true"
-        class="svg-inline--fa fa-bars fa-w-14 c2"
+        class="svg-inline--fa fa-bars fa-w-14 c1"
         data-icon="bars"
         data-prefix="fas"
         focusable="false"
@@ -124,16 +117,16 @@ exports[`matches snapshot 1`] = `
       </svg>
     </div>
     <div
-      class="c3"
+      class="c2"
       data-testid="card"
     >
       <div
-        class="c4"
+        class="c3"
         data-testid="cardHead"
       >
         <svg
           aria-hidden="true"
-          class="svg-inline--fa fa-redo-alt fa-w-16 c5"
+          class="svg-inline--fa fa-redo-alt fa-w-16 c4"
           data-icon="redo-alt"
           data-prefix="fas"
           data-tip="Reload Data"
@@ -148,12 +141,12 @@ exports[`matches snapshot 1`] = `
           />
         </svg>
         <h3
-          class="c6"
+          class="c5"
         >
           Your Facebook Campaigns' Data
         </h3>
         <h4
-          class="c7"
+          class="c6"
         >
           Showing Data From 
           <span>
@@ -176,27 +169,27 @@ exports[`matches snapshot 1`] = `
         </div>
       </div>
       <div
-        class="c8"
+        class="c7"
       >
         <div
           class="dataTableWrap"
         >
           <table
-            class="c9"
+            class="c8"
             data-testid="datatable"
           >
             <thead>
               <tr
-                class="c10"
+                class="c9"
               >
                 <th
-                  class="c11"
+                  class="c10"
                 >
                   Campaign Id
                    
                   <svg
                     aria-hidden="true"
-                    class="svg-inline--fa fa-caret-down fa-w-10 c12"
+                    class="svg-inline--fa fa-caret-down fa-w-10 c11"
                     data-for="columnCollapseTooltip"
                     data-icon="caret-down"
                     data-prefix="fas"
@@ -216,13 +209,13 @@ exports[`matches snapshot 1`] = `
                   </div>
                 </th>
                 <th
-                  class="c13"
+                  class="c12"
                 >
                   App and Installs
                    
                   <svg
                     aria-hidden="true"
-                    class="svg-inline--fa fa-caret-down fa-w-10 c12"
+                    class="svg-inline--fa fa-caret-down fa-w-10 c11"
                     data-for="columnCollapseTooltip"
                     data-icon="caret-down"
                     data-prefix="fas"
@@ -238,7 +231,7 @@ exports[`matches snapshot 1`] = `
                     />
                   </svg>
                   <h4
-                    class="c14"
+                    class="c13"
                   >
                     € 344
                   </h4>
@@ -247,13 +240,13 @@ exports[`matches snapshot 1`] = `
                   </div>
                 </th>
                 <th
-                  class="c13"
+                  class="c12"
                 >
                   CoH Real Acquisition
                    
                   <svg
                     aria-hidden="true"
-                    class="svg-inline--fa fa-caret-down fa-w-10 c12"
+                    class="svg-inline--fa fa-caret-down fa-w-10 c11"
                     data-for="columnCollapseTooltip"
                     data-icon="caret-down"
                     data-prefix="fas"
@@ -269,7 +262,7 @@ exports[`matches snapshot 1`] = `
                     />
                   </svg>
                   <h4
-                    class="c14"
+                    class="c13"
                   >
                     € 35
                   </h4>
