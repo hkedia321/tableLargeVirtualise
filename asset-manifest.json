@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/tableLargeVirtualise/static/css/main.b654e091.chunk.css",
+    "main.js": "/tableLargeVirtualise/static/js/main.47e29ef1.chunk.js",
+    "main.js.map": "/tableLargeVirtualise/static/js/main.47e29ef1.chunk.js.map",
+    "runtime-main.js": "/tableLargeVirtualise/static/js/runtime-main.5400e84a.js",
+    "runtime-main.js.map": "/tableLargeVirtualise/static/js/runtime-main.5400e84a.js.map",
+    "static/js/2.51547a2c.chunk.js": "/tableLargeVirtualise/static/js/2.51547a2c.chunk.js",
+    "static/js/2.51547a2c.chunk.js.map": "/tableLargeVirtualise/static/js/2.51547a2c.chunk.js.map",
+    "index.html": "/tableLargeVirtualise/index.html",
+    "precache-manifest.229c692f51f25612b1506220c13f0bd3.js": "/tableLargeVirtualise/precache-manifest.229c692f51f25612b1506220c13f0bd3.js",
+    "service-worker.js": "/tableLargeVirtualise/service-worker.js",
+    "static/css/main.b654e091.chunk.css.map": "/tableLargeVirtualise/static/css/main.b654e091.chunk.css.map",
+    "static/js/2.51547a2c.chunk.js.LICENSE.txt": "/tableLargeVirtualise/static/js/2.51547a2c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5400e84a.js",
+    "static/js/2.51547a2c.chunk.js",
+    "static/css/main.b654e091.chunk.css",
+    "static/js/main.47e29ef1.chunk.js"
+  ]
+}
