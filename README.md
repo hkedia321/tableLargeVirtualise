@@ -1,5 +1,5 @@
-# Clarisights Table Graph
-This project implements a table with 1000 records showing Graph trends of advertisement data. The data is received from Clarisight's public API. 
+# Table Graph
+This project implements a table with 1000 records showing Graph trends of advertisement data. The data is received from a public API. 
 
 * **Pagination solution:** [hkedia321.github.io/tableLargeRecordsGraph/](https://hkedia321.github.io/tableLargeRecordsGraph/)
 
@@ -31,7 +31,7 @@ render only those rows at a time. [master branch](https://github.com/hkedia321/t
 This project is bootstraped with [Create React App](https://github.com/facebook/create-react-app)
 
 ## External APIs Used
-* Clarisight's API for table data: [1000 items table response.json](https://clarisights-users.s3.eu-central-1.amazonaws.com/frontend-assignment/1000+items+table+response.json)
+* a API for table data: [1000 items table response.json](https:/-users.s3.eu-central-1.amazonaws.com/frontend-assignment/1000+items+table+response.json)
 
 ## Local Installation
 ### Steps
